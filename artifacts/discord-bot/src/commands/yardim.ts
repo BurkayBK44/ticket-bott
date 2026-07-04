@@ -49,6 +49,9 @@ export async function execute(
         value: [
           "**`/davet`**",
           "Botu başka bir sunucuya eklemek için davet linkini gönderir. (Yalnızca sana görünür)",
+          "",
+          "**`/sunucular`**",
+          "Botun ekli olduğu tüm sunucuları listeler. (Yalnızca yöneticiler, yalnızca sana görünür)",
         ].join("\n"),
       },
       {
