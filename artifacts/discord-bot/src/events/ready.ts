@@ -8,7 +8,7 @@ export async function onReady(client: Client): Promise<void> {
   client.user!.setPresence({
     activities: [
       {
-        name: "Bu bot AYAHKN5 Youtube için kurulmuştur.",
+        name: "Bu bot AYAHKN5 Youtube için kurulmuştur. Yardım için--> /yardim",
         type: ActivityType.Custom,
       },
     ],
