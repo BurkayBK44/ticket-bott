@@ -1,6 +1,4 @@
-import { ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder, Message } from "discord.js";
-
-const INVITE_URL = "https://discord.com/api/oauth2/authorize?client_id=1522965622194180096&permissions=268561424&scope=bot%20applications.commands";
+import { EmbedBuilder, Message } from "discord.js";
 
 export async function onMessageCreate(message: Message): Promise<void> {
   if (message.author.bot) return;
@@ -34,12 +32,5 @@ export async function onMessageCreate(message: Message): Promise<void> {
     .setFooter({ text: "Daha fazla bilgi için /yardim komutunu kullanabilirsin." })
     .setTimestamp();
 
-  const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
-    new ButtonBuilder()
-      .setLabel("🔗 Botu Sunucuna Ekle")
-      .setStyle(ButtonStyle.Link)
-      .setURL(INVITE_URL)
-  );
-
-  await message.reply({ embeds: [embed], components: [row] });
+  await message.reply({ embeds: [embed] });
 }
