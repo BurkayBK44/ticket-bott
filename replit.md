@@ -1,6 +1,6 @@
-# [Project name]
+# Discord Ticket Botu
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Türkçe Discord ticket sistemi — çoklu panel, yetkili rol yönetimi, log kanalı, üye ayrılınca otomatik kapama ve kullanıcı başına tek ticket sınırı.
 
 ## Run & Operate
 
