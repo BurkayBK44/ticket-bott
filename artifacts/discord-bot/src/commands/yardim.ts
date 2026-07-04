@@ -52,6 +52,9 @@ export async function execute(
           "",
           "**`/sunucular`**",
           "Botun ekli olduğu tüm sunucuları listeler. (Yalnızca yöneticiler, yalnızca sana görünür)",
+          "",
+          "**`/yeniden-basla`**",
+          "Botu yeniden başlatır. (Yalnızca yöneticiler, yalnızca sana görünür)",
         ].join("\n"),
       },
       {
