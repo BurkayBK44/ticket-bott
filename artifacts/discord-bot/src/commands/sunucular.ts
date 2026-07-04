@@ -13,10 +13,10 @@ export const data = new SlashCommandBuilder()
 export async function execute(
   interaction: ChatInputCommandInteraction
 ): Promise<void> {
-  const guilds = interaction.client.guilds.cache;
+  const guilds = [...interaction.client.guilds.cache.values()];
 
   const liste = guilds
-    .map((g, i) => `**${guilds.indexOf(g) + 1}.** ${g.name} — \`${g.memberCount} üye\``)
+    .map((g, i) => `**${i + 1}.** ${g.name} — \`${g.memberCount} üye\``)
     .join("\n");
 
   const embed = new EmbedBuilder()
