@@ -45,6 +45,13 @@ export async function execute(
         ].join("\n"),
       },
       {
+        name: "🔗 Diğer Komutlar",
+        value: [
+          "**`/davet`**",
+          "Botu başka bir sunucuya eklemek için davet linkini gönderir. (Yalnızca sana görünür)",
+        ].join("\n"),
+      },
+      {
         name: "ℹ️ Bilgi",
         value: [
           "• Kurulum komutları yalnızca **Yöneticiler** tarafından kullanılabilir.",
