@@ -3,6 +3,8 @@ import { initDB } from "./db.js";
 import { onReady } from "./events/ready.js";
 import { onInteractionCreate } from "./events/interactionCreate.js";
 import { onGuildMemberRemove } from "./events/guildMemberRemove.js";
+import { onGuildCreate } from "./events/guildCreate.js";
+import { onMessageCreate } from "./events/messageCreate.js";
 
 if (!process.env.DISCORD_BOT_TOKEN) {
   console.error("❌ DISCORD_BOT_TOKEN tanımlanmamış!");
@@ -40,6 +42,16 @@ client.on("interactionCreate", (interaction) =>
 client.on("guildMemberRemove", (member) =>
   onGuildMemberRemove(member).catch((err) =>
     console.error("guildMemberRemove hatası:", err)
+  )
+);
+client.on("guildCreate", (guild) =>
+  onGuildCreate(guild).catch((err) =>
+    console.error("guildCreate hatası:", err)
+  )
+);
+client.on("messageCreate", (message) =>
+  onMessageCreate(message).catch((err) =>
+    console.error("messageCreate hatası:", err)
   )
 );
 
