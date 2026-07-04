@@ -1,9 +1,19 @@
-import { Client, REST, Routes } from "discord.js";
+import { ActivityType, Client, REST, Routes } from "discord.js";
 import { commands } from "../commands/index.js";
 
 export async function onReady(client: Client): Promise<void> {
   const tag = client.user?.tag ?? "Bilinmiyor";
   console.log(`✅ Bot hazır: ${tag}`);
+
+  client.user!.setPresence({
+    activities: [
+      {
+        name: "Bu bot AYAHKN5 Youtube için kurulmuştur.",
+        type: ActivityType.Custom,
+      },
+    ],
+    status: "online",
+  });
 
   const rest = new REST({ version: "10" }).setToken(
     process.env.DISCORD_BOT_TOKEN!
