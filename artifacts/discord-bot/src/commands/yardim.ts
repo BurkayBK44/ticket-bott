@@ -56,5 +56,5 @@ export async function execute(
     .setFooter({ text: "Ticket Sistemi • Tüm işlemler Türkçe olarak yürütülür." })
     .setTimestamp();
 
-  await interaction.reply({ embeds: [embed], ephemeral: true });
+  await interaction.reply({ embeds: [embed] });
 }
