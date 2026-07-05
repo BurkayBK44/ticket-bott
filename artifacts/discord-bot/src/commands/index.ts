@@ -1,6 +1,7 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js";
 import * as panelKur from "./panelKur.js";
 import * as panelEkle from "./panelEkle.js";
+import * as panelSil from "./panelSil.js";
 import * as yetkiliRol from "./yetkiliRol.js";
 import * as logKanal from "./logKanal.js";
 import * as yardim from "./yardim.js";
@@ -16,6 +17,7 @@ export interface Command {
 export const commands: Command[] = [
   panelKur as Command,
   panelEkle as Command,
+  panelSil as Command,
   yetkiliRol as Command,
   logKanal as Command,
   yardim as Command,

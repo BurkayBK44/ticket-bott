@@ -4,11 +4,10 @@ import { commands } from "../commands/index.js";
 export async function onReady(client: Client): Promise<void> {
   const tag = client.user?.tag ?? "Bilinmiyor";
   console.log(`✅ Bot hazır: ${tag}`);
-
   client.user!.setPresence({
     activities: [
       {
-        name: "Bu bot AYAHKN5 Youtube için kurulmuştur. Yardım için--> /yardim",
+        name: "Bu bot tweezers13 tarafından yönetilmektedir.. Yardım için--> /yardim",
         type: ActivityType.Custom,
       },
     ],
