@@ -7,15 +7,14 @@ export async function onMessageCreate(message: Message): Promise<void> {
   const embed = new EmbedBuilder()
     .setColor(0x5865f2)
     .setTitle("👋 Merhaba! Ben TicketTure")
-    .setDescription(
-      "AYAHKN5 Youtube sunucusunun ticket botuyum. Aşağıdaki komutları kullanabilirsin:"
-    )
+    .setDescription("Aşağıdaki komutları kullanabilirsin:")
     .addFields(
       {
         name: "⚙️ Kurulum Komutları",
         value: [
           "`/panel-kur` — Ticket panelini kanala kurar",
           "`/panel-ekle` — Panele yeni kategori ekler",
+          "`/panel-sil` — Ticket panelini siler",
           "`/yetkili-rol` — Ticket yetkililerini ayarlar (1-9 rol)",
           "`/log-kanal` — Ticket log kanalını ayarlar",
         ].join("\n"),
