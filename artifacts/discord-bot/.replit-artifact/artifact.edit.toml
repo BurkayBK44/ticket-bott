@@ -1,0 +1,21 @@
+kind = "api"
+previewPath = "/discord-bot"
+title = "Discord Bot"
+version = "1.0.0"
+id = "dBt4Rkzm2NxHqvWpLsCeX"
+
+[[services]]
+localPort = 8082
+name = "Discord Bot"
+paths = ["/discord-bot"]
+
+[services.development]
+run = "pnpm --filter @workspace/discord-bot run dev"
+
+[services.production]
+
+[services.production.run]
+args = ["pnpm", "--filter", "@workspace/discord-bot", "run", "start"]
+
+[services.production.run.env]
+NODE_ENV = "production"
