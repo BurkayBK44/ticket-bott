@@ -52,7 +52,6 @@ export async function execute(
         value: [
           "**`/davet`** — Botu başka bir sunucuya eklemek için davet linkini gönderir.",
           "**`/sunucular`** — Botun bulunduğu sunucuları listeler. (Yalnızca bot sahipleri)",
-          "**`/yeniden-basla`** — Botu yeniden başlatır. (Yalnızca bot sahipleri)",
         ].join("\n"),
       },
       {

@@ -7,7 +7,6 @@ import * as logKanal from "./logKanal.js";
 import * as yardim from "./yardim.js";
 import * as davet from "./davet.js";
 import * as sunucular from "./sunucular.js";
-import * as yenidenBasla from "./yenidenBasla.js";
 
 export interface Command {
   data: SlashCommandBuilder;
@@ -23,7 +22,6 @@ export const commands: Command[] = [
   yardim as Command,
   davet as Command,
   sunucular as Command,
-  yenidenBasla as Command,
 ];
 
 export const commandMap = new Map<string, Command>(
