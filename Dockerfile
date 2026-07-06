@@ -1,20 +1,12 @@
 FROM node:20-slim
 
-RUN npm install -g pnpm
-
 WORKDIR /app
 
-# pnpm workspace dosyalarını kopyala
-COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
-COPY artifacts/discord-bot/package.json ./artifacts/discord-bot/
-COPY lib/ ./lib/
+COPY railway-package.json ./package.json
 
-# Bağımlılıkları yükle
-RUN pnpm install --frozen-lockfile --filter @workspace/discord-bot...
+RUN npm install
 
-# Bot kodunu kopyala
-COPY artifacts/discord-bot/ ./artifacts/discord-bot/
+COPY artifacts/discord-bot/src ./src
+COPY artifacts/discord-bot/tsconfig.json ./tsconfig.json
 
-WORKDIR /app/artifacts/discord-bot
-
-CMD ["pnpm", "run", "start"]
+CMD ["node", "--import", "tsx/esm", "src/index.ts"]
